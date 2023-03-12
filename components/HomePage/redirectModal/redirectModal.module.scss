@@ -1,0 +1,41 @@
+@use '../../../styles/abstract/' as a;
+
+.redirectContainer {
+  width: min(90%, a.rem(460));
+  height: max-content;
+  background: a.$white;
+  margin-block: 13rem auto;
+  border-radius: a.rem(10);
+  padding: a.$margin-large;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  @include a.breakpoint(tablet) {
+    min-height: max-content;
+    margin-block: 16rem auto;
+  }
+
+  &__title {
+    margin: 0 auto;
+    color: a.$red;
+  }
+
+  &__text {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: a.$font-15;
+    color: a.$mediumGray;
+  }
+}
+
+.light {
+  @include a.lighttheme(mainBg);
+  color: a.$black;
+}
+.dark {
+  @include a.darktheme(mainBg);
+  color: a.$white;
+}

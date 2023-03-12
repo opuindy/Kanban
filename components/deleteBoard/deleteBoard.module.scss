@@ -1,0 +1,51 @@
+@use '../../styles/abstract/' as a;
+
+.deleteBoardContainer {
+  width: min(90%, a.rem(460));
+  height: max-content;
+  background: a.$white;
+  margin-block: 13rem auto;
+  border-radius: a.rem(10);
+  padding: a.$margin-large;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+
+  @include a.breakpoint(tablet) {
+    min-height: max-content;
+  }
+
+  &__title {
+    width: 95%;
+    font-size: a.$font-18;
+    margin-block: auto;
+    color: a.$red;
+    text-transform: capitalize;
+    margin-block: 0 a.$margin-small;
+  }
+
+  &__paragraph {
+    font-size: a.$font-13;
+    color: a.$mediumGray;
+    margin-block: 0 a.$margin-small;
+  }
+
+  &__buttonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: a.$margin-small;
+  }
+}
+
+.light {
+  @include a.lighttheme(mainBg);
+  color: a.$black;
+}
+.dark {
+  @include a.darktheme(mainBg);
+  color: a.$white;
+}

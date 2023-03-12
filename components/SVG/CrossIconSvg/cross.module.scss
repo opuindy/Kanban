@@ -1,0 +1,8 @@
+@use '../../../styles/abstract/' as a;
+
+.crossSvg {
+  @include a.transition;
+  // &:hover {
+  //   fill: a.$red;
+  // }
+}

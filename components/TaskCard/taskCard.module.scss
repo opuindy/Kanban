@@ -1,0 +1,45 @@
+@use '../../styles//abstract/' as a;
+
+.taskContainer {
+  width: 100%;
+  min-height: 6rem;
+  display: flex;
+  border-radius: a.rem(10);
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: a.$margin-medium a.$margin-small;
+  margin-bottom: a.$margin-medium;
+  gap: a.$margin-tiny;
+  box-shadow: 1px 5px 8px 2px a.$cardShadow;
+  -webkit-box-shadow: 1px 5px 8px 2px a.$cardShadow;
+  -moz-box-shadow: 1px 5px 8px 2px a.$cardShadow;
+
+  &:hover {
+    cursor: pointer;
+    opacity: a.$hover;
+  }
+
+  &__taskTitle {
+    font-size: a.$font-15;
+    text-transform: capitalize;
+    margin-bottom: 0;
+  }
+
+  &__completedTask {
+    font-size: a.$font-12;
+    font-weight: a.weight(bold);
+    color: a.$mediumGray;
+    margin-bottom: 0;
+  }
+}
+
+.light {
+  @include a.lighttheme(mainBg);
+  color: a.$black;
+}
+.dark {
+  @include a.darktheme(mainBg);
+  color: a.$white;
+  border-bottom: 1px solid a.$darkGrayLine;
+}

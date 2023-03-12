@@ -1,0 +1,27 @@
+@use '../../styles/abstract/' as a;
+
+.columnContainer {
+  width: 288px;
+  min-width: 18rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: a.$margin-small;
+
+  &__TaskCardContainer {
+    width: 100%;
+    min-height: 70vh;
+
+    border-radius: a.rem(10);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.emptyColumnContainer {
+  border: a.rem(2) dashed a.$mediumGray;
+  border-top-left-radius: none;
+  border-radius: a.rem(10);
+}

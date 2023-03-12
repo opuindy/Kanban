@@ -1,0 +1,47 @@
+@use '../../styles/abstract/' as a;
+
+.loginPage {
+  width: 100%;
+  height: calc(100vh - 6rem);
+  margin-top: 6rem;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include a.breakpoint(tablet) {
+    margin-left: 18.75rem;
+    width: calc(100% - 18.75rem);
+  }
+}
+
+.light {
+  @include a.lighttheme(bg);
+  color: a.$black;
+  .demo {
+    @include a.lighttheme(addButton);
+    color: a.$darkBlue;
+    &:hover {
+      opacity: a.$hover;
+    }
+  }
+}
+.dark {
+  @include a.darktheme(bg);
+  color: a.$white;
+  .demo {
+    @include a.lighttheme(addButton);
+    color: a.$darkBlue;
+    &:hover {
+      opacity: a.$hover;
+    }
+  }
+}
+
+.removeMargin {
+  @include a.breakpoint(tablet) {
+    width: 100%;
+    margin-left: 0;
+  }
+}

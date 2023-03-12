@@ -1,0 +1,60 @@
+@use '../../styles/abstract/' as a;
+
+.createBoardContainer {
+  width: min(90%, a.rem(460));
+  height: max-content;
+  background: a.$white;
+  margin-block: 13rem auto;
+  border-radius: a.rem(10);
+  padding: a.$margin-large;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  gap: a.$margin-small;
+
+  @include a.breakpoint(tablet) {
+    min-height: max-content;
+    margin-block: 9rem auto;
+  }
+
+  &__title {
+    width: 95%;
+    font-size: a.$font-18;
+    margin-block: auto;
+    text-transform: capitalize;
+  }
+
+  &__createNew {
+    width: 100%;
+    height: 2.5rem;
+    font-size: a.$font-13 !important;
+    border-radius: a.rem(50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: a.weight(bold);
+    // @include a.transition;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__createNew {
+    background: a.$darkBlue;
+    color: a.$white;
+    &:hover {
+      background: a.$lightBlue;
+    }
+  }
+}
+
+.light {
+  @include a.lighttheme(mainBg);
+  color: a.$black;
+}
+.dark {
+  @include a.darktheme(mainBg);
+  color: a.$white;
+}

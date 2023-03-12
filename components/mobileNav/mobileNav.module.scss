@@ -1,0 +1,18 @@
+@use '../../styles/abstract/' as a;
+
+.MobileNavContainer {
+  width: a.rem(330);
+  height: max-content;
+  margin-block: 7rem auto;
+  border-radius: a.rem(10);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.light {
+  @include a.lighttheme(mainBg);
+}
+.dark {
+  @include a.darktheme(mainBg);
+}

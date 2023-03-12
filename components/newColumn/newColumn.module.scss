@@ -1,0 +1,26 @@
+@use '../../styles/abstract/' as a;
+
+.columnContainer {
+  min-width: 18rem;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: a.$mediumGray;
+  font-size: a.$font-25;
+  font-weight: a.weight(medium);
+  margin-top: calc(a.$margin-large + a.rem(3));
+  border-radius: a.rem(10);
+  background: a.$mediumGrayGradient;
+  cursor: pointer;
+  &:hover {
+    color: a.$darkBlue;
+  }
+}
+
+.light {
+  @include a.lighttheme(mainBg);
+}
+.dark {
+  @include a.darktheme(mainBg);
+}

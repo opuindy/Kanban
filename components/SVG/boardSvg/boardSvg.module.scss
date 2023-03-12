@@ -1,0 +1,13 @@
+@use '../../../styles/abstract/' as a;
+
+.createSvg {
+  fill: a.$darkBlue;
+}
+
+.active {
+  fill: a.$white;
+}
+
+.normal {
+  fill: hsl(216, 15%, 57%);
+}

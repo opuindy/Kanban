@@ -1,0 +1,62 @@
+@use '../../styles/abstract/' as a;
+
+.nav {
+  height: inherit;
+  width: inherit;
+  padding-top: a.$margin-medium;
+  padding-right: a.$margin-medium;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  &__title {
+    font-size: a.$font-12;
+    color: a.$mediumGray;
+    letter-spacing: 0.2em;
+    margin-left: a.$margin-large;
+    margin-block: 0 a.$margin-small;
+  }
+
+  &__listContainer {
+    width: 100%;
+    list-style-type: none;
+    margin-block: 0;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.2em;
+  }
+
+  &__button {
+    width: 100%;
+    height: 3rem;
+    padding-left: a.$margin-large;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: a.$mediumGray;
+    border-top-right-radius: a.rem(50);
+    border-bottom-right-radius: a.rem(50);
+    font-size: 1.059rem;
+    font-weight: a.weight(medium);
+    margin: 0;
+    gap: a.$margin-small;
+
+    &:hover {
+      cursor: pointer;
+      background: a.$lightBlue;
+      color: a.$white;
+    }
+
+    &__boardIcon {
+      width: 1rem;
+    }
+  }
+}
+
+.height {
+  margin-bottom: 4.5rem;
+}

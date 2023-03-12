@@ -1,0 +1,66 @@
+@use '../../../styles/abstract/' as a;
+
+.form {
+  width: min(90%, a.rem(460));
+  height: max-content;
+  background: a.$white;
+
+  margin-block: 5rem auto;
+  border-radius: a.rem(10);
+  padding: a.$margin-large;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  gap: a.$margin-small;
+
+  @include a.breakpoint(tablet) {
+    min-height: max-content;
+  }
+
+  &__title {
+    width: 95%;
+    font-size: a.$font-18;
+    text-transform: capitalize;
+  }
+
+  &__buttonContainer {
+    width: 100%;
+    height: 2.5rem;
+    font-size: a.$font-15;
+    border-radius: a.rem(50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: a.$white;
+    font-weight: a.weight(bold);
+    margin-block: 0;
+    background: a.$darkBlue;
+    &:hover {
+      cursor: pointer;
+      opacity: a.$hover;
+    }
+  }
+
+  &__text {
+    color: a.$mediumGray;
+    margin-bottom: 0;
+  }
+
+  &__register {
+    margin-top: -0.5em;
+    color: a.$darkBlue;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+.light {
+  @include a.lighttheme(mainBg);
+  color: a.$black;
+}
+.dark {
+  @include a.darktheme(mainBg);
+  color: a.$white;
+}

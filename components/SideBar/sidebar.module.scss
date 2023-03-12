@@ -1,0 +1,26 @@
+@use '../../styles//abstract/' as a;
+
+.sideBar {
+  width: 18.75rem;
+  height: calc(100% - 5rem);
+  margin-top: a.rem(-2);
+  position: fixed;
+  left: 0;
+  top: 6rem;
+  transform: translateX(-100vw);
+  display: none;
+  overflow-x: hidden;
+  @include a.breakpoint(tablet) {
+    transform: translateX(0);
+    display: block;
+  }
+}
+
+.light {
+  @include a.lighttheme(mainBg);
+  border-right: 1px solid a.$lightGrayLine;
+}
+.dark {
+  @include a.darktheme(mainBg);
+  border-right: 1px solid a.$darkGrayLine;
+}

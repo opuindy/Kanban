@@ -1,0 +1,23 @@
+@use '../../../styles/abstract/' as a;
+
+.button {
+  @include a.button;
+  width: 100%;
+  height: 3rem;
+  justify-content: flex-start;
+  padding-left: a.$margin-large;
+  color: a.$darkBlue;
+  font-size: 1.059rem;
+  font-weight: a.weight(bold);
+  gap: a.$margin-small;
+  // margin-bottom: auto;
+
+  &:hover {
+    cursor: pointer;
+    opacity: a.$hover;
+  }
+
+  &__boardIcon {
+    width: 1rem;
+  }
+}

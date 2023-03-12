@@ -1,0 +1,51 @@
+@use '../../../styles/abstract/' as a;
+
+.select {
+  width: 100%;
+  position: relative;
+
+  select {
+    width: 100%;
+    height: 2.5rem;
+    text-transform: capitalize;
+    border: 2px solid a.$mediumGray;
+    outline: none;
+    border-radius: a.rem(5);
+    padding-inline: a.$margin-small;
+    font-size: a.$font-13;
+    font-weight: a.weight(bold);
+    background: inherit;
+    color: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    @include a.transition;
+
+    &:focus {
+      border: 2px solid a.$darkBlue;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  option {
+    font-weight: a.weight(medium);
+    border-radius: a.rem(10);
+    color: a.$mediumGray;
+    width: 100%;
+    height: 100%;
+  }
+
+  option:first-child {
+    display: none;
+  }
+}
+
+.light {
+  @include a.lighttheme(bg);
+  background: a.$white;
+}
+.dark {
+  @include a.darktheme(bg);
+}

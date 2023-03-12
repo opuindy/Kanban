@@ -1,0 +1,10 @@
+@use '../../styles//abstract/' as a;
+
+.button {
+  @include a.button($bg: inherit);
+  height: 100%;
+  width: 100%;
+  border-radius: a.rem(50);
+  font-size: inherit;
+  font-weight: a.weight(bold);
+}

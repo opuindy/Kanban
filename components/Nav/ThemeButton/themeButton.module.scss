@@ -1,0 +1,73 @@
+@use '../../../styles/abstract/' as a;
+
+.ThemeButtonContainer {
+  width: 80%;
+
+  height: 3rem;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: a.rem(5);
+  gap: a.$margin-medium;
+
+  &__button {
+    width: 2.55rem;
+    height: 1.3rem;
+    border-radius: a.rem(50);
+    border: none;
+    outline: none;
+    background: a.$darkBlue;
+    position: relative;
+    @include a.transition;
+
+    &:hover {
+      cursor: pointer;
+      background: a.$lightBlue;
+    }
+  }
+
+  &__span {
+    width: 0.85rem;
+    height: 0.85rem;
+    border-radius: 50%;
+    position: absolute;
+    background: a.$white;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__themeIcon {
+    width: 1.2rem;
+  }
+}
+
+.light {
+  @include a.lighttheme(themeSwitchBox);
+}
+.dark {
+  @include a.darktheme(themeSwitchBox);
+}
+
+.moveLeft {
+  margin: 0 0.3em;
+  left: 0;
+  @include a.transition;
+}
+.moveRight {
+  margin: 0 0.3em;
+  right: 0;
+  @include a.transition;
+}
+
+.true {
+  width: 10rem;
+  height: 2.5rem;
+  margin-block: auto;
+  margin-right: a.$margin-medium;
+  @include a.breakpoint(tablet) {
+    height: 3rem;
+    width: 13rem;
+  }
+}

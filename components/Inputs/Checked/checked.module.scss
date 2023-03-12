@@ -1,0 +1,94 @@
+@use '../../../styles/abstract/' as a;
+
+.checked {
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: a.rem(10);
+  margin-bottom: a.$margin-tiny;
+  @include a.transition;
+
+  &:hover {
+    cursor: pointer;
+    background: a.$darkBlueOpacity;
+  }
+
+  label {
+    font-size: a.$font-12;
+    font-weight: a.weight(bold);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: a.$margin-tiny;
+    padding-inline: a.$margin-tiny;
+    position: relative;
+    @include a.transition;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      height: a.rem(14);
+      width: a.rem(14);
+      cursor: pointer;
+      border-radius: a.rem(3);
+      border: a.rem(0.5) solid a.$mediumGray;
+      @include a.transition;
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      height: a.rem(5);
+      width: a.rem(10);
+      border-left: a.rem(2) solid a.$white;
+      border-bottom: a.rem(2) solid a.$white;
+      transform: rotate(-45deg);
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+    }
+
+    &::before {
+      left: a.rem(12);
+    }
+
+    &::after {
+      content: none;
+      top: a.rem(16);
+      left: a.rem(12);
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__input {
+    opacity: 0;
+  }
+
+  &__input[type='checkbox']:checked {
+    opacity: 1;
+  }
+}
+
+.light {
+  @include a.lighttheme(bg);
+  color: a.$black;
+}
+.dark {
+  @include a.darktheme(bg);
+  color: a.$white;
+}
+
+.isCompleted {
+  color: a.$mediumGray;
+  text-decoration: line-through;
+}
+

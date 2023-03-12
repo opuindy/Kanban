@@ -1,0 +1,29 @@
+@use '../../../styles/abstract/' as a;
+
+.button {
+  width: 100%;
+  height: 2.35rem;
+  border-radius: a.rem(50);
+  font-size: a.$font-13;
+  font-weight: a.weight(bold);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  &:hover {
+    opacity: a.$hover;
+  }
+}
+.redButton {
+  background: a.$red;
+  color: a.$white;
+}
+
+.light {
+  @include a.lighttheme(addButton);
+  color: a.$darkBlue;
+}
+.dark {
+  @include a.darktheme(addButton);
+  color: a.$darkBlue;
+}

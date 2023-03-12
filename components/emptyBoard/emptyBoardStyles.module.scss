@@ -1,0 +1,44 @@
+@use '../../styles/abstract/' as a;
+
+.emptyBoard {
+  margin: auto;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: a.$margin-small;
+
+  &__text {
+    font-size: a.$font-18;
+    font-weight: a.weight(regular);
+    margin-block: 0;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  &__buttonContainer {
+    height: 3rem;
+    width: 13rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: a.$white;
+    font-size: a.$font-16;
+    background: a.$darkBlue;
+    border-radius: a.rem(50);
+
+    &:hover {
+      background: a.$lightBlue;
+    }
+  }
+}
+
+.light {
+  @include a.lighttheme(bg);
+  color: a.$black;
+}
+.dark {
+  @include a.darktheme(bg);
+  color: a.$white;
+}

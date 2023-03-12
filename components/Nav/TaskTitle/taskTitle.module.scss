@@ -1,0 +1,36 @@
+@use '../../../styles/abstract/' as a;
+
+.taskTitle {
+  width: 100%;
+  height: 3rem;
+  padding-left: a.$margin-large;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: a.$mediumGray;
+  border-top-right-radius: a.rem(50);
+  border-bottom-right-radius: a.rem(50);
+  font-size: 1rem;
+  font-weight: a.weight(bold);
+  margin: 0;
+  gap: a.$margin-small;
+
+  &.active {
+    background: a.$darkBlue;
+    color: a.$white;
+    &:hover {
+      cursor: pointer;
+      background: a.$darkBlue;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: a.$lightBlue;
+    color: a.$white;
+  }
+
+  &__boardIcon {
+    width: 1rem;
+  }
+}

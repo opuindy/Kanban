@@ -1,0 +1,12 @@
+@use '../../../styles/abstract/' as a;
+
+.position {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: a.$margin-small;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

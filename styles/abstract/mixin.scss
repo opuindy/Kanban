@@ -1,0 +1,49 @@
+@use './functions.scss' as *;
+
+@mixin themeColor($theme: light, $color-name) {
+  background: color($theme, $color-name);
+}
+
+@mixin boxShadow {
+  border: 1px solid color(bg);
+  box-shadow: 0 0 8px $cardShadow;
+}
+
+@mixin transition {
+  transition: all 0.2s ease-in;
+}
+
+@mixin button($bg: transparent, $co: inherit) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $bg;
+  color: $co;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@mixin lighttheme($color-name) {
+  background: color($color-name);
+}
+
+@mixin darktheme($color-name) {
+  background: darkcolor($color-name);
+}
+
+@mixin inputStandard {
+  & input,
+  & textArea {
+    background: transparent;
+    color: color(title);
+    font-size: $font-13;
+    padding: $margin-tiny $margin-small;
+    border-radius: 4px;
+    border: 2px solid $mediumGrayOpacity;
+    transition: border 0.2s ease;
+    &:focus-visible {
+      border-color: $darkBlue;
+    }
+  }
+}

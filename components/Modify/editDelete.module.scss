@@ -1,0 +1,36 @@
+@use '../../styles/abstract/' as a;
+
+.buttonContainer {
+  width: 12rem;
+  height: 6rem;
+  position: absolute;
+  top: 4.9rem;
+  right: a.$margin-medium;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  border-radius: a.rem(10);
+  padding-block: a.$margin-small;
+  padding-left: a.$margin-small;
+  gap: a.$margin-small;
+}
+
+.right {
+  right: -13%;
+}
+
+.light {
+  @include a.lighttheme(mainBg);
+  color: a.$black;
+  box-shadow: 1px 5px 8px 2px a.$cardShadow;
+  -webkit-box-shadow: 1px 5px 8px 2px a.$cardShadow;
+  -moz-box-shadow: 1px 5px 8px 2px a.$cardShadow;
+}
+.dark {
+  @include a.darktheme(bg);
+  color: a.$white;
+  box-shadow: 1px 5px 8px 2px a.$cardShadow;
+  -webkit-box-shadow: 1px 5px 8px 2px a.$cardShadow;
+  -moz-box-shadow: 1px 5px 8px 2px a.$cardShadow;
+}

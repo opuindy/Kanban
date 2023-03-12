@@ -1,0 +1,75 @@
+@use '../../styles/abstract/' as a;
+
+.addTaskContainer {
+  width: min(90%, a.rem(460));
+  height: max-content;
+  background: a.$white;
+
+  margin-block: a.rem(5) auto;
+  border-radius: a.rem(10);
+  padding: a.$margin-large;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  gap: a.$margin-small;
+
+  @include a.breakpoint(tablet) {
+    min-height: max-content;
+  }
+
+  &__title {
+    width: 95%;
+    font-size: a.$font-18;
+    margin-block: auto;
+    text-transform: capitalize;
+  }
+
+  &__subtask {
+    font-size: a.$font-13;
+    font-weight: a.weight(bold);
+    color: a.$mediumGray;
+    margin-block: 0;
+    margin-bottom: a.$margin-tiny;
+  }
+
+  &__status {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__createTask {
+    width: 100%;
+    height: 2.5rem;
+    font-size: a.$font-15;
+    border-radius: a.rem(50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: a.$white;
+    font-weight: a.weight(bold);
+    margin-block: 0;
+    background: a.$darkBlue;
+    &:hover {
+      cursor: pointer;
+      opacity: a.$hover;
+    }
+  }
+}
+
+.error {
+  top: 67%;
+}
+
+.light {
+  @include a.lighttheme(mainBg);
+  color: a.$black;
+}
+.dark {
+  @include a.darktheme(mainBg);
+  color: a.$white;
+}

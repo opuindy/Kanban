@@ -1,0 +1,35 @@
+@use '../../styles/abstract/' as a;
+
+.buttonContainer {
+  width: max-content;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.button {
+  @include a.button;
+  margin-inline: a.$margin-small a.$margin-medium;
+  padding: 0.5em;
+  border-radius: a.rem(50);
+  @include a.breakpoint(tablet) {
+  }
+}
+
+.margin {
+  margin-inline: 0;
+}
+
+.light {
+  &:hover {
+    background: a.$lightGray;
+  }
+}
+
+.dark {
+  &:hover {
+    background: a.$veryDarkGray;
+  }
+}

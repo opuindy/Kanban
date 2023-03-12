@@ -1,0 +1,15 @@
+@use '../../styles/abstract/' as a;
+
+.modalContainer {
+  width: 100%;
+  min-height: 115%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: a.$overlay;
+  margin-left: 0;
+  z-index: 10;
+}

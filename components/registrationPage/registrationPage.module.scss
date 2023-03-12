@@ -1,0 +1,33 @@
+@use '../../styles/abstract/' as a;
+
+.registration {
+  width: 100%;
+  height: calc(100vh - 6rem);
+  margin-top: 6rem;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include a.breakpoint(tablet) {
+    margin-left: 18.75rem;
+    width: calc(100% - 18.75rem);
+  }
+}
+
+.light {
+  @include a.lighttheme(bg);
+  color: a.$black;
+}
+.dark {
+  @include a.darktheme(bg);
+  color: a.$white;
+}
+
+.removeMargin {
+  @include a.breakpoint(tablet) {
+    width: 100%;
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,51 @@
+//color
+$black: hsl(0, 0%, 0%);
+$white: hsl(0, 0%, 100%);
+$red: hsl(0, 78%, 63%);
+$darkBlue: hsl(242, 48%, 58%);
+$veryLightBlue: hsl(245, 52%, 96%);
+$lightBlue: hsl(243, 100%, 82%);
+$lightGray: hsl(220, 69%, 97%);
+$lightGrayLine: hsl(221, 69%, 94%);
+$mediumGray: hsl(216, 15%, 57%);
+$darkGray: hsl(235, 12%, 19%);
+$darkGrayLine: hsl(236, 11%, 27%);
+$veryDarkGray: hsl(235, 16%, 15%);
+$cardShadow: hsla(220, 40%, 35%, 0.102);
+$overlay: hsla(0, 0%, 0%, 0.5);
+$mediumGrayOpacity: hsla(216, 15%, 57%, 0.4);
+$mediumGrayGradient: linear-gradient(
+  to bottom,
+  hsla(215, 11%, 53%, 0.2),
+  hsla(216, 15%, 57%, 0.1),
+  hsla(216, 15%, 57%, 0)
+);
+$darkBlueOpacity: hsla(242, 48%, 58%, 0.251);
+
+$light: (
+  bg: $lightGray,
+  scroll: $mediumGray,
+  borderLine: $lightGrayLine,
+  mainBg: $white,
+  title: $black,
+  subTitle: $mediumGray,
+  board: $white,
+  themeSwitchBox: $lightGray,
+  addButton: $veryLightBlue,
+  ellipsis: $lightGrayLine,
+  checked: hsla(0, 0%, 0%, 0.502),
+);
+
+$dark: (
+  bg: $veryDarkGray,
+  scroll: $darkGrayLine,
+  borderLine: $darkGrayLine,
+  mainBg: $darkGray,
+  title: $white,
+  subTitle: $white,
+  board: $veryDarkGray,
+  themeSwitchBox: $veryDarkGray,
+  addButton: $white,
+  ellipsis: $veryDarkGray,
+  checked: hsla(0, 0%, 100%, 0.5),
+);

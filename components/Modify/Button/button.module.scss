@@ -1,0 +1,16 @@
+@use '../../../styles/abstract/' as a;
+
+.button {
+  @include a.button;
+  color: a.$mediumGray;
+  font-weight: a.weight(regular);
+  font-size: a.$font-16;
+
+  &:hover {
+    opacity: a.$hover;
+  }
+}
+
+.red {
+  color: a.$red;
+}

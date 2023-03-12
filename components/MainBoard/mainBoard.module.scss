@@ -1,0 +1,27 @@
+@use '../../styles/abstract/' as a;
+
+.mainBoard {
+  width: max-content;
+  min-height: calc(100vh - 6rem);
+  margin-top: 6rem;
+  margin-left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: inherit;
+  padding: a.$margin-medium;
+  gap: a.$margin-medium;
+  overflow: visible;
+  overflow-y: hidden;
+
+  @include a.breakpoint(tablet) {
+    margin-left: 18.75rem;
+  }
+}
+
+.removeMargin {
+  @include a.breakpoint(tablet) {
+    margin-left: 0;
+    padding: a.$margin-large;
+  }
+}

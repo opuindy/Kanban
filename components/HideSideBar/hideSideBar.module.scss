@@ -1,0 +1,62 @@
+@use '../../styles//abstract/' as a;
+
+.openSideBar,
+.hideSideBar {
+  position: fixed;
+  bottom: 1.5em;
+  // z-index: 5;
+  display: none;
+  transform: translateX(-100vw);
+  @include a.breakpoint(tablet) {
+    transform: translateX(0);
+    display: block;
+  }
+}
+
+.hideSideBar {
+  width: max-content;
+  height: 3rem;
+  margin-inline: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+  left: a.$margin-large;
+
+  &:hover {
+    cursor: pointer;
+    opacity: a.$hover;
+  }
+
+  &__title {
+    margin-block: auto;
+    font-size: a.$font-16;
+    color: a.$mediumGray;
+  }
+}
+
+.openSideBar {
+  width: 3.5rem;
+  height: 3rem;
+  margin-inline-end: auto;
+  // margin-block: 0 1.5em;
+  background-color: a.$darkBlue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: a.rem(50);
+  border-bottom-right-radius: a.rem(50);
+  left: 0;
+
+  &:hover {
+    cursor: pointer;
+    background: a.$lightBlue;
+  }
+}
+
+.sideBarIcon {
+  width: 1.15rem;
+}
+.sideBarIconOpen {
+  width: 1.1rem;
+}

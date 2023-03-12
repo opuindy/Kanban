@@ -1,0 +1,136 @@
+@use '../../styles/abstract/' as a;
+
+.header {
+  width: 100%;
+  height: 6rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__logoContainer {
+    height: 100%;
+    border-right: none;
+    padding: a.$margin-medium;
+
+    @include a.breakpoint(tablet) {
+      width: 18.75rem;
+      border-right: inherit;
+      padding: a.$margin-large;
+    }
+  }
+
+  &__img {
+    width: 1.7rem;
+    @include a.breakpoint(tablet) {
+      width: 9.5rem;
+    }
+  }
+
+  &__homeImg {
+    width: 8rem;
+    @include a.breakpoint(tablet) {
+      width: 9.5rem;
+    }
+  }
+
+  &__titleContainer {
+    min-width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+      font-size: a.$font-24;
+      margin-block: auto;
+    }
+    .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+      border: none;
+      outline: none;
+      margin-left: 0.5em;
+
+      .img {
+        width: 0.7rem;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    @include a.breakpoint(tablet) {
+      margin-left: a.$margin-medium;
+    }
+  }
+
+  &__addButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline-start: auto;
+  }
+
+  &__buttonContainer {
+    height: 1.8rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: a.$white;
+    font-size: a.$font-15;
+    background: a.$darkBlue;
+    border-radius: a.rem(50);
+
+    &:hover {
+      background: a.$lightBlue;
+    }
+
+    .addIcon {
+      width: 0.7rem;
+    }
+
+    @include a.breakpoint(tablet) {
+      height: 2.7rem;
+      width: 10rem;
+    }
+  }
+}
+
+.light {
+  @include a.lighttheme(mainBg);
+  color: a.$black;
+  border-bottom: 1px solid a.$lightGrayLine;
+
+  @include a.breakpoint(tablet) {
+    border-right: 1px solid a.$lightGrayLine;
+  }
+}
+.dark {
+  @include a.darktheme(mainBg);
+  color: a.$white;
+  border-bottom: 1px solid a.$darkGrayLine;
+
+  @include a.breakpoint(tablet) {
+    border-right: 1px solid a.$darkGrayLine;
+  }
+}
+
+.rotateUp {
+  transform: translateY(90deg);
+}
+
+.head {
+  z-index: 3;
+}
+
+.pad {
+  padding-right: 0;
+  @include a.breakpoint(tablet) {
+    padding: a.$margin-large;
+  }
+}
