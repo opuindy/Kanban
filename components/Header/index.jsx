@@ -33,7 +33,7 @@ const Header = (props) => {
   const logoImage = theme === 'light' ? logoDark : logoLight;
   const buttonImage = openMobileNav ? iconUp : iconDown;
   const { boards } = data;
-  const image = windowWidth > 767 ? logoImage : logoMobile;
+  // const image = windowWidth < 768 ? logoMobile : logoImage;
 
   if (props.homePage) {
     return (
@@ -73,7 +73,16 @@ const Header = (props) => {
   return (
     <header className={`${styles.header} ${styles[theme]}`}>
       <div className={`${styles.header__logoContainer} ${styles[theme]}`}>
-        <Image src={image} alt='logo' className={styles.header__img} />
+        <Image
+          src={logoImage}
+          alt='logo'
+          className={`${styles.header__img} ${styles.desktop}`}
+        />
+        <Image
+          src={logoMobile}
+          alt='logo'
+          className={`${styles.header__img} ${styles.mobile}`}
+        />
       </div>
       <div className={styles.header__titleContainer}>
         <h2 className={styles.title}>
@@ -100,15 +109,8 @@ const Header = (props) => {
             whileTap={{ scale: 0.9 }}
           >
             <UtilityButton onClick={() => dispatch(handleOpenAddTaskModal())}>
-              {windowWidth > 767 ? (
-                '+ Add New Task'
-              ) : (
-                <Image
-                  src={iconAdd}
-                  alt='add-icon'
-                  className={styles.addIcon}
-                />
-              )}
+              <span className={styles.span}>{'+ Add New Task'}</span>
+              <Image src={iconAdd} alt='add-icon' className={styles.addIcon} />
             </UtilityButton>
           </motion.div>
           <EllipsisButton

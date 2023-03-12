@@ -64,6 +64,7 @@
     }
 
     @include a.breakpoint(tablet) {
+      display: none;
       margin-left: a.$margin-medium;
     }
   }
@@ -91,7 +92,17 @@
     }
 
     .addIcon {
+      display: block;
       width: 0.7rem;
+      @include a.breakpoint(tablet) {
+        display: none;
+      }
+    }
+    .span {
+      display: none;
+      @include a.breakpoint(tablet) {
+        display: block;
+      }
     }
 
     @include a.breakpoint(tablet) {
@@ -132,5 +143,18 @@
   padding-right: 0;
   @include a.breakpoint(tablet) {
     padding: a.$margin-large;
+  }
+}
+
+.desktop {
+  display: none;
+  @include a.breakpoint(tablet) {
+    display: block;
+  }
+}
+.mobile {
+  display: block;
+  @include a.breakpoint(tablet) {
+    display: none;
   }
 }
