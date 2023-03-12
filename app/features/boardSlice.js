@@ -39,12 +39,10 @@ const boardSlice = createSlice({
               task.status = payload.newStatus;
               status = task.status;
               taskIndex = column.tasks.indexOf(task);
-
               if (column.name !== task.status) {
                 taskToMove.push(
                   column.tasks.find((task) => task.status !== column.name)
                 );
-
                 state.data.boards[state.activeIndex].columns.map((column) => {
                   if (column.name === task.status) {
                     column.tasks.unshift(taskToMove[0]);
